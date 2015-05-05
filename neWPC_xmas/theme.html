@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}>-<{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//--><script language=JavaScript>
+/* Snow Script by Altan d.o.o. snow@altan.hr */
+var snowsrc="<{$xoops_imageurl}>imagens/neige.gif"
+var no = 10;
+var ie4up = (document.all) ? 1 : 0;
+var nn6up = (document.getElementById) ? 1 : 0;
+var dx, xp, yp;
+var am, stx, sty;
+var i, doc_width = 1024, doc_height = 160;
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+for (i = 0; i < no; ++ i) {
+dx[i] = 0;
+xp[i] = Math.random()*(doc_width-50);
+yp[i] = Math.random()*doc_height;
+am[i] = Math.random()*20;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+if (ie4up || nn6up) {
+if (i == 0) { document.write("<div id=dot"+ i +" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+snowsrc+"' border=0></div>");
+} else {
+document.write("<div id=dot"+ i +" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+snowsrc+"' border=0></div>");
+}
+}
+}
+function snowIE() {
+for (i = 0; i < no; ++ i) {
+yp[i] += sty[i];
+if (yp[i] > doc_height-50) {
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+}
+dx[i] += stx[i];
+document.all["dot"+i].style.pixelTop = yp[i];
+document.all["dot"+i].style.pixelLeft = xp[i] + am[i]*Math.sin(dx[i]);
+}
+setTimeout("snowIE()", 35);
+}
+function snowNN6() {
+for (i = 0; i < no; ++ i) {
+yp[i] += sty[i];
+if (yp[i] > doc_height-50) {
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+}
+dx[i] += stx[i];
+document.getElementById("dot"+i).style.top = yp[i];
+document.getElementById("dot"+i).style.left = xp[i] + am[i]*Math.sin(dx[i]);
+}
+setTimeout("snowNN6()", 35);
+}
+if (ie4up) {
+snowIE();
+} else if (nn6up) {
+snowNN6();
+}
+</script>
+</head>
+<body>
+<div align="center">
+<table>
+<tr><td>
+<table cellspacing="0">
+<tr id="header">
+<td width="18%"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>imagens/logo.jpg" width="150" height="80" align="left" alt="<{$xoops_meta_description}>" /></a></td>
+<td width="60%" id="headerbanner"><{$xoops_banner}></td>
+<td width="20%"><br /><center>
+<form style="margin-top: 0px;" action="<{$xoops_url}>/search.php" method="post">
+<input type="text" name="query" size="13" /><input type="hidden" name="action" value="results" /><br /><input type="submit" value="Recherche" />
+</form></td></center>
+<td width="2%">&nbsp;</td>
+</tr>
+<tr>
+<td id="headerguirlande" height="8" width="100%" colspan="4"><br /></td>
+</tr>
+</table>
+</td></tr>
+<tr><td>
+<table border="0" cellpadding="0" cellspacing="0" height="55">
+<tr id="headerbar">
+<td width="8%"><a href="<{$xoops_url}>/modules/newbb/"><img src="<{$xoops_imageurl}>bouton/forum.gif" alt="Forums" /><br />Forum</a></td>
+<td width="8%"><a href="<{$xoops_url}>/modules/news/"><img src="<{$xoops_imageurl}>bouton/news.gif" alt="News" /><br />News</a></td>
+<td width="8%"><a href="<{$xoops_url}>/modules/khat/"><img src="<{$xoops_imageurl}>bouton/chatroom.gif" alt="Chatroom" /><br />Chatroom</a></td>
+<td width="8%"><a href="<{$xoops_url}>/modules/downloads/"><img src="<{$xoops_imageurl}>bouton/download.gif" alt="Downloads" /><br />Downloads</a></td>
+<td width="8%"><a href="<{$xoops_url}>/modules/edito/"><img src="<{$xoops_imageurl}>bouton/server.gif" alt="Server" /><br />Server</a></td>
+<td width="8%"><a href="<{$xoops_url}>/modules/smartfaq/"><img src="<{$xoops_imageurl}>bouton/faq.gif" alt="FAQ" /><br />FAQ</a></td>
+<td width="8%"><a href="<{$xoops_url}>/media/howl.wav" target="_blank"><img src="<{$xoops_imageurl}>bouton/dont.gif" alt="Don't click!" /><br />Don't click!</a></td>
+ <td id="headerbar" width="28%">
+<span style="font-size: 90%;"><b><{$xoops_sitename}></b><br /><{$xoops_pagetitle}></span>
+ </td>
+<{if $xoops_isuser}>
+<td id="headerbar" width="6%">&nbsp;
+<{if $nbrepm!=0}>
+<a href="<{$xoops_url}>/viewpmsg.php"><img src="<{$xoops_imageurl}>/bouton/pm_yes.gif" width="32" alt="Vous avez <{$nbrepm}> message
+<{if $nbrepm > 1}>s<{else}><{/if}>" /><br /><font color="red"><{$nbrepm}></font> message<{if $nbrepm > 1}>s<{else}><{/if}></a>
+<{else}>
+<a href="<{$xoops_url}>/viewpmsg.php"><img src="<{$xoops_imageurl}>/bouton/pm_no.gif" width="32" alt="Message" /><br />Message</a>
+<{/if}>
+ </td>
+<td id="headerbar" width="6%">
+<a href="<{$xoops_url}>/userinfo.php?uid=<{$xoops_userid}>">
+<img src="<{$xoops_imageurl}>bouton/membre.gif" alt="<{$xoops_uname}>"/>
+<br /><{$xoops_uname}></a><br />
+ </td>
+<{if $xoops_isadmin}>
+ <td id="headerbar" width="6%">
+<a href="<{$xoops_url}>/admin.php">
+<img src="<{$xoops_imageurl}>bouton/admin.gif" alt="Admin" />
+<br />Admin</a><br />
+<{else}>
+<td width="4%" id="headerbar" >&nbsp;</td>
+<{/if}>
+<{else}>
+<td width="6%" id="headerbar" >
+<a href="<{$xoops_url}>/user.php">
+<img src="<{$xoops_imageurl}>bouton/login.gif" alt="Login" />
+<br />Enregistrez-vous !</a>
+<td width="4%" id="headerbar" >&nbsp;</td>
+<{/if}>
+ </td>
+</tr>
+</table>
+</td></tr>
+<tr><td>
+<table cellspacing="0">
+<tr>
+<td id="leftcolumn">
+<!-- Start left blocks loop -->
+<{foreach item=block from=$xoops_lblocks}>
+<{include file="default/theme_blockleft.html"}></br>
+<{/foreach}>
+<!-- Fim do "loop" dos blocos da esquerda -->
+</td>
+<td id="centercolumn">
+<!-- Display center blocks if any -->
+<{if $xoops_showcblock == 1}>
+<table cellspacing="0">
+<tr>
+<td id="centerCcolumn" colspan="2">
+<!-- Start center-center blocks loop -->
+<{foreach item=block from=$xoops_ccblocks}>
+<{include file="default/theme_blockcenter_c.html"}>
+<{/foreach}>
+<!-- End center-center blocks loop -->
+</td>
+</tr>
+<tr>
+<td id="centerLcolumn">
+<!-- Start center-left blocks loop -->
+<{foreach item=block from=$xoops_clblocks}>
+<{include file="default/theme_blockcenter_l.html"}>
+<{/foreach}>
+<!-- End center-left blocks loop -->
+</td><td id="centerRcolumn">
+<!-- Start center-right blocks loop -->
+<{foreach item=block from=$xoops_crblocks}>
+<{include file="default/theme_blockcenter_r.html"}>
+<{/foreach}>
+<!-- End center-right blocks loop -->
+</td>
+</tr>
+</table>
+<{/if}>
+<!-- End display center blocks -->
+<div id="content">
+<{$xoops_contents}>
+</div>
+</td>
+<{if $xoops_showrblock == 1}>
+<td id="rightcolumn">
+<!-- Início dos blocos da direita -->
+<{foreach item=block from=$xoops_rblocks}>
+<{include file="default/theme_blockright.html"}><br />
+<{/foreach}>
+<!-- End right blocks loop -->
+</td>
+<{/if}>
+</tr>
+</table>
+</td></tr>
+<tr><td>
+<table cellspacing="0">
+<tr id="footerbar">
+<td><{$xoops_footer}><br />
+Theme design :<a href="http://www.wolfpackclan.com">Solo - Wolf Pack Clan</a>
+</td></tr>
+</table>
+</table>
+</div>
+</body>
+</html>
